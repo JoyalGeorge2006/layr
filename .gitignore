@@ -2,3 +2,5 @@ node_modules/
 dist/
 layr.html
 .vercel/
+.vercel
+.env*
