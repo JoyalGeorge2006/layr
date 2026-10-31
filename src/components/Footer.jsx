@@ -3,83 +3,55 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container" style={{ textAlign: 'center' }}>
-        <div
-          className="row"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 16,
-          }}
-        >
-          <div>
-            <div
-              className="brand"
-              style={{
-                marginBottom: 8,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: 8,
-              }}
-            >
+      <div className="container">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <a className="brand" href="#top">
               <img src="/icon.svg" className="brand-mark" alt="Layr" />
               <span>Layr</span>
-            </div>
-            <div>
-              Create stunning Layr designs in seconds. Built with ♥️.Built by miqu.
-            </div>
+            </a>
+            <p className="footer-tagline">
+              Create stunning Layr designs in seconds. Built with ♥️ by miqu.
+            </p>
           </div>
 
-          <div
-            className="footer-links"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: 16,
-            }}
-          >
-            <a href="#features">Features</a>
-            <a href="#how">How it works</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#" target="_blank" rel="noreferrer">Twitter</a>
-            <a href="#" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-          </div>
+          <nav className="footer-cols" aria-label="Footer">
+            <div className="footer-col">
+              <h6>Product</h6>
+              <a href="#features">Features</a>
+              <a href="#how">How it works</a>
+              <a href="#gallery">Gallery</a>
+            </div>
+            <div className="footer-col">
+              <h6>Connect</h6>
+              <a href="#" target="_blank" rel="noreferrer">Twitter</a>
+              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+            </div>
+            <div className="footer-col">
+              <h6>Legal</h6>
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+            </div>
+          </nav>
         </div>
 
-        <div className="dl-badge-wrap">
+        <div className="footer-bottom">
+          <span className="footer-copy">
+            © {new Date().getFullYear()} Layr. All rights reserved.
+          </span>
           <a
-            className="dl-badge"
+            className="dl-pill dl-pill--footer"
             href="https://discoveryloop.vercel.app/p/layr-create-stunning-designs-in-seconds-26fe6313"
             target="_blank"
             rel="noopener"
-            aria-label="Launched on DiscoveryLoop"
+            aria-label="Launched on DiscoveryLoop — founder badge"
           >
-            <img
-              className="dl-badge-light"
-              src="/badges/dl-badge-light.svg"
-              alt=""
-              width="300"
-              height="140"
-              loading="lazy"
-            />
-            <img
-              className="dl-badge-dark"
-              src="/badges/dl-badge-dark.svg"
-              alt=""
-              width="300"
-              height="140"
-              loading="lazy"
-            />
+            <span className="dl-pill-mark" aria-hidden="true">D</span>
+            <span className="dl-pill-copy">
+              <span className="dl-pill-title">Launched on <strong>DiscoveryLoop</strong></span>
+              <span className="dl-pill-sub">0 votes · Founder badge</span>
+            </span>
           </a>
-        </div>
-
-        <div style={{ marginTop: 18, color: 'var(--text-subtle)' }}>
-          © {new Date().getFullYear()} Layr. All rights reserved.
         </div>
       </div>
     </footer>

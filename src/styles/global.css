@@ -229,8 +229,8 @@ input, textarea, select {
 }
 @media (max-width: 480px) {
   .app-header .inner { padding: 0 12px; }
-  .brand span { display: none; }
-  .brand-mark { width: 26px; height: 26px; }
+  .app-header .brand span { display: none; }
+  .app-header .brand-mark { width: 26px; height: 26px; }
 }
 
 /* ---------- Hero ---------- */
@@ -478,42 +478,71 @@ input, textarea, select {
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border);
-  padding: 36px 0 56px;
+  padding-top: 56px;
   color: var(--text-muted);
   font-size: 13px;
 }
-@media (max-width: 480px) {
-  .footer { padding: 24px 0 40px; font-size: 12px; }
-}
-.footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center; }
-.footer a:hover { color: var(--text); }
-.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
-
-.dl-badge-wrap {
+.footer-top {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 26px;
+  justify-content: space-between;
+  gap: 48px;
+  padding-bottom: 44px;
+}
+.footer-brand { max-width: 340px; }
+.footer-brand .brand { font-size: 16px; }
+.footer-tagline {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, auto));
+  gap: 48px;
+}
+.footer-col { display: flex; flex-direction: column; gap: 9px; }
+.footer-col h6 {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+.footer-col a {
+  width: fit-content;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color .15s ease;
+}
+.footer-col a:hover { color: var(--text); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0 28px;
+  border-top: 1px solid var(--border);
+}
+.footer-copy { font-size: 12.5px; color: var(--text-subtle); }
+
+.dl-pill--footer { margin: 0; padding: 5px 14px 5px 5px; gap: 9px; }
+.dl-pill--footer .dl-pill-mark { width: 24px; height: 24px; font-size: 13px; border-radius: 6px; }
+.dl-pill--footer .dl-pill-title { font-size: 12px; }
+.dl-pill--footer .dl-pill-sub { font-size: 8px; }
+
+@media (max-width: 820px) {
+  .footer-top { flex-direction: column; gap: 32px; padding-bottom: 36px; }
+  .footer-cols { gap: 32px; }
 }
 @media (max-width: 720px) {
-  .dl-badge-wrap { display: none; }
+  .dl-pill--footer { display: none; }
 }
-.dl-badge {
-  display: inline-block;
-  line-height: 0;
-  transition: transform .18s ease;
-}
-.dl-badge:hover { transform: translateY(-2px); }
-.dl-badge img {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-.dl-badge .dl-badge-dark { display: none; }
-@media (prefers-color-scheme: dark) {
-  .dl-badge .dl-badge-light { display: none; }
-  .dl-badge .dl-badge-dark { display: block; }
+@media (max-width: 560px) {
+  .footer { padding-top: 40px; }
+  .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; padding: 16px 0 24px; }
 }
 
 /* ---------- Editor ---------- */
