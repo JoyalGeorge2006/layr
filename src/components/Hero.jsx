@@ -15,6 +15,19 @@ export default function Hero({ onFile, onPick }) {
   return (
     <section className="hero" id="top">
       <div className="container">
+        <a
+          className="dl-pill"
+          href="https://discoveryloop.vercel.app/p/layr-create-stunning-designs-in-seconds-26fe6313"
+          target="_blank"
+          rel="noopener"
+          aria-label="Launched on DiscoveryLoop — founder badge"
+        >
+          <span className="dl-pill-mark" aria-hidden="true">D</span>
+          <span className="dl-pill-copy">
+            <span className="dl-pill-title">Launched on <strong>DiscoveryLoop</strong></span>
+            <span className="dl-pill-sub">0 votes · Founder badge</span>
+          </span>
+        </a>
         <span className="eyebrow">✨ AI-powered · No sign-up · Free forever</span>
         <h1 className="h-display">
           Create <span className="gradient-text">Text-Behind-Image</span><br />

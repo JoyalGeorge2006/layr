@@ -51,6 +51,33 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="dl-badge-wrap">
+          <a
+            className="dl-badge"
+            href="https://discoveryloop.vercel.app/p/layr-create-stunning-designs-in-seconds-26fe6313"
+            target="_blank"
+            rel="noopener"
+            aria-label="Launched on DiscoveryLoop"
+          >
+            <img
+              className="dl-badge-light"
+              src="/badges/dl-badge-light.svg"
+              alt=""
+              width="300"
+              height="140"
+              loading="lazy"
+            />
+            <img
+              className="dl-badge-dark"
+              src="/badges/dl-badge-dark.svg"
+              alt=""
+              width="300"
+              height="140"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
         <div style={{ marginTop: 18, color: 'var(--text-subtle)' }}>
           © {new Date().getFullYear()} Layr. All rights reserved.
         </div>
